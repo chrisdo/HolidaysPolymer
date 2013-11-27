@@ -1,0 +1,12 @@
+<polymer-element name="holiday-item" attributes="item">
+  <template> 
+  <div class="holiday">
+      <h2>{{item.title}}</h2>
+      <h5>{{item.type}}</h5>
+      <strong>FROM</strong> {{datestart}} <strong>UNTIL </strong> {{dateend}}<br>
+      <strong>DURATION: </strong> {{item.duration}}       
+      <blockquote>{{item.description}}</blockquote>  
+  </div>
+  </template>
+  <script type="application/dart" src="holiday_item.dart"></script>
+</polymer-element>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<polymer-element name="holiday-form" attributes="collection"> 
+<template>
+<form class="pure-form pure-form-stacked">
+  <fieldset>
+    <legend>Holiday Input</legend>
+    <label for="title">Title</label> 
+    <input id="title" type="text"
+      value="{{title}}" placeholder="title"> 
+      <label for="type">Type</label>
+    <input id="type" type="text" value="{{type}}" placeholder="type">
+    <label for="startdate">Start date</label> 
+    <input id="startdate"
+      type="date" value="{{startdate}}">
+    <label for="enddate">End date</label> 
+    <input id="enddate" type="date"
+      value="{{enddate}}"> 
+      <label
+      for="description">Description</label>
+    <textarea id="description" value="{{description}}"
+      placeholder="descritopn"></textarea>
+    <button type="submit" class="pure-button pure-button-primary"
+      on-click="{{addHoliday}}" id="formular-button">Add</button>
+  </fieldset>
+</form>
+</template> 
+<script type="application/dart" src="holiday_form.dart"></script> 
+</polymer-element>

@@ -1,0 +1,9 @@
+name: HolidaysPolymer
+description: A sample Polymer application
+dependencies:
+  http_server: any
+  intl: any
+  polymer: any
+transformers:
+- polymer:
+    entry_points: web/holidayspolymer.html

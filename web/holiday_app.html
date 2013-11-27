@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<link rel="import" href="holiday_form.html">
+<link rel="import" href="holiday_item.html">
+
+<polymer-element name="holiday-app"> 
+<template>
+<div class="pure-g-r" id="layout">
+    <div class="sidebar pure-u">
+        <header class="header">
+            <hgroup>
+                <h1 class="brand-title">A Sample Blog</h1>
+                <h2 class="brand-tagline">Creating a blog layout using Pure</h2>
+            </hgroup>
+            </header>
+<div class="pure-menu pure-menu-open">
+    <a class="pure-menu-heading">Holidays</a>
+
+    <ul>
+        <li><a href="#">List View</a></li>
+        <li><a href="#">Calendar View</a></li>
+        <li><a href="#">Statistics</a></li>
+        
+        <li class="pure-menu-heading">Actions!</li>
+        <li><a href="#">Add Holiday</a></li>
+    </ul>
+</div>
+            
+</div>
+
+    <div class="pure-u-1">
+        <div class="content">
+        <holiday-form collection={{holidayItems}} id="holiday-formular"></holiday-form>
+        
+      <template repeat="{{item in holidayItems}}"> 
+      <div class="pure-u-1-4">
+      <holiday-item item="{{item}}" on-click={{test}}></holiday-item>     
+    </div>
+      </template>
+     
+</div>
+</div>
+</div>
+
+</template> 
+<script src="holiday_app.dart" type="application/dart"></script>
+</polymer-element>
