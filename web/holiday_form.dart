@@ -7,10 +7,15 @@ import 'dart:convert';
 @CustomTag('holiday-form')
 class HolidayForm extends PolymerElement {
 
+  Element background;
+  Element content;
+
   @published List<Holiday> collection;
 
+  @observable int selected = 1; // Make sure this is not null.
+
   @observable String title;
-  @observable String type;
+  @observable String type = 'relaxation';
   @observable String startdate;
   @observable String enddate;
   @observable String description;
@@ -23,9 +28,16 @@ class HolidayForm extends PolymerElement {
 
   ButtonElement button;
 
+  List<String> types = ['doctor','relaxation','holiday', 'kids', 'lazyness'];
+
   HolidayForm.created() : super.created(){
     print("Input form created");
    button = $['formular-button'];
+  }
+
+  void cancel(Event e, var detail, Element target){
+    e.preventDefault();
+    hide();
   }
 
   void addHoliday(Event e, var detail, Element target) {
@@ -70,7 +82,28 @@ class HolidayForm extends PolymerElement {
       print('No server');
     }
     button.disabled = false;
+    hide();
   }
+
+  @override
+  void enteredView(){
+    super.enteredView();
+    background = $["dialogbackground"];
+    content = $["dialogcontent"];
+    hide();
+  }
+
+  void show() {
+    background.style.display = 'block';
+    content.style.display = 'block';
+  }
+
+
+  void hide() {
+    background.style.display = 'none';
+    content.style.display = 'none';
+  }
+
 
 
 }
