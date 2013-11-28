@@ -5,6 +5,7 @@ import 'models.dart';
 import 'dart:async';
 import 'dart:html';
 import 'holiday_form.dart';
+import 'holiday_item.dart';
 
 @CustomTag('holiday-app')
 class HolidayApp extends PolymerElement {
@@ -64,8 +65,8 @@ class HolidayApp extends PolymerElement {
   }
 
 
-  void test(Event e, var detail, Element target){
-    print('item clicked');
+  void removeItem(Event e, var detail, Element target){
+
   }
 
   void toggleDialog(MouseEvent event) {

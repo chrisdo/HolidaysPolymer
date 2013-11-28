@@ -70,7 +70,7 @@ class HolidayForm extends PolymerElement {
       holiday.duration = int.parse(result["takenWorkDays"]);
       collection.add(holiday);
       title = null;
-      type = null;
+
       startdate = null;
       enddate = null;
       description = null;

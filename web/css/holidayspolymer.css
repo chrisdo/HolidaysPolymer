@@ -109,6 +109,15 @@ textarea {
   font-style: normal;
   font-weight: normal;
 }
+
+/*
+dark blue: #1C2130
+light blue: #6D9DD1
+bursting blue: #028F76
+lite mint: B3E099
+crystal: FFEAAD
+Love: D14334
+*/
 /*
     red: #E73F3F
     orange: #F76C27
@@ -136,7 +145,7 @@ textarea {
     background: #666;
 }
 .pure-menu.pure-menu-blackbg .pure-menu-selected a {
-    background: #7E45D3; /* will be replaced to #7E45D3 */
+    background: D14334; /* will be replaced to #7E45D3 */
 }
 .pure-menu.pure-menu-blackbg .pure-menu-selected a:hover {
     color: #efefef;
@@ -156,21 +165,26 @@ textarea {
     background-color: #798388;
 }
 
-.holiday-piece-redbg {
-    background-color: #E73F3F;
+.holiday-piece-bright {
+    background-color: #FFEAAD;
+    color: #000;
 }
 .holiday-piece-relaxation {
-    background-color: #F76C27;
-}
-.holiday-piece-kids {
-    background-color: #E7E737;
-}
-.holiday-piece-doctor {
     background-color: #6D9DD1;
 }
-.holiday-piece-lazyness {
-    background-color: #7E45D3;
+.holiday-piece-kids {
+    background-color: #B3E099;
 }
+.holiday-piece-doctor {
+    background-color: #028F76;
+}
+.holiday-piece-lazyness {
+    background-color: #1C2130;
+}
+.holiday-piece-holiday {
+    background-color: #D14334;
+}
+
 .holiday-piece-graybg {
     background-color: #798388;
 }
